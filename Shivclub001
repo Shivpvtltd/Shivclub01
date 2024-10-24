@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Shiv Club heading */
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4CAF50;
+    text-shadow: 2px 2px 5px #888;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* Shiv Club Logo Section */
+.logo-container {
+    background-color: #ff4d4d;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo-container h1 {
+    color: white;
+    font-size: 48px;
+    margin: 0;
+}
+
+/* Box design for wallet balance */
+.wallet-box {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-box h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+.wallet-box .wallet-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.wallet-box button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.withdraw {
+    background-color: #ff6666;
+    color: white;
+}
+
+.deposit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Top box with wingo and timer */
+.top-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffe066;
+    padding: 10px;
+    border-radius: 5px;
+    height: 3.2cm; /* Set height to 3.2cm */
+    margin-bottom: 20px;
+}
+
+.top-box .wingo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px; /* Added padding for space below */
+}
+
+.top-box .wingo p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.top-box .numbers {
+    display: flex;
+    gap: 5px;
+}
+
+.number-ball {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: white;
+}
+
+.green { background-color: green; }
+.red { background-color: red; }
+.violet { background-color: violet; }
+
+.time-box {
+    text-align: right;
+}
+
+.time-box p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.time-box .time-remaining {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Number grid */
+.number-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.number-grid .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.number-grid .number-ball {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4);
+    transform: perspective(500px) translateZ(15px);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+}
+
+.number-ball:hover {
+    transform: translateY(-5px);
+}
+
+/* 3D Heading Boxes */
+.heading-boxes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.heading-box {
+    width: 110px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4);
+    transform: perspective(500px) translateZ(15px);
+}
+
+.heading-box.green { background-color: green; }
+.heading-box.violet { background-color: violet; }
+.heading-box.red { background-color: red; }
+.heading-box.big { background-color: blue; }
+.heading-box.small { background-color: orange; }
+
+/* Betting Input */
+.betting {
+    margin: 20px 0;
+}
+
+.betting input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.betting button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Results history */
+.results-history {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.results-history .history-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.history-row .dragon-icon {
+    width: 20px;
+    height: 20px;
+    background-color: gold;
+    border-radius: 50%;
+}
+
+/* History header styling */
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Alignments for history columns */
+.period-no {
+    width: 40%; /* Left side for Period */
+    text-align: left;
+}
+
+.number-center {
+    width: 30%; /* Center for Number */
+    text-align: center;
+}
+
+.big-small-right {
+    width: 30%; /* Right side for Big/Small */
+    text-align: right;
+}
