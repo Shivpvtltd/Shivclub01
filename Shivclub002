@@ -1,0 +1,78 @@
+let timeLeft = 30;
+let results = [];
+let timerInterval;
+let periodCounter = 201024001; // Starting Period Number
+
+function startTimer() {
+    timerInterval = setInterval(() => {
+        document.getElementById('timer').innerText = `00:${timeLeft < 10 ? '0' : ''}${timeLeft}`;
+        timeLeft--;
+
+        if (timeLeft < 0) {
+            timeLeft = 30;
+            generateRandomNumber();
+        }
+    }, 1000);
+}
+
+function generateRandomNumber() {
+    const number = Math.floor(Math.random() * 10);  // Random number between 0 and 9
+    const colorClass = getColorClass(number);
+
+    // Add new result to the array
+    results.push({ number, colorClass, period: periodCounter });
+
+    // Keep only the last 5 results
+    if (results.length > 5) {
+        results.shift();
+    }
+
+    periodCounter++; // Increment period number
+    updateWingoNumbers();
+    updateHistory();
+    updateNextPeriod();
+}
+
+function getColorClass(number) {
+    return number % 2 === 0 ? 'red' : 'green'; // Even numbers are red, odd are green
+}
+
+function updateWingoNumbers() {
+    const wingoDiv = document.getElementById('wingo-numbers');
+    wingoDiv.innerHTML = '';
+
+    results.forEach(result => {
+        const numberCircle = document.createElement('div');
+        numberCircle.classList.add('number-ball', result.colorClass);
+        numberCircle.innerText = result.number;
+        wingoDiv.appendChild(numberCircle);
+    });
+}
+
+function updateHistory() {
+    const historyDiv = document.getElementById('results-history');
+    historyDiv.innerHTML = '';
+
+    // Reverse results for history display
+    for (let i = results.length - 1; i >= 0; i--) {
+        const result = results[i];
+        const historyRow = document.createElement('div');
+        historyRow.classList.add('history-row');
+
+        historyRow.innerHTML = `
+            <div class="period-no">${result.period}</div>
+            <div class="number-center">${result.number}</div>
+            <div class="big-small-right">${result.number >= 5 ? 'Big' : 'Small'}</div>
+        `;
+
+        historyDiv.appendChild(historyRow);
+    }
+}
+
+function updateNextPeriod() {
+    const nextPeriod = document.getElementById('period-number');
+    nextPeriod.innerText = periodCounter; // Update next period number
+}
+
+startTimer();
+
