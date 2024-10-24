@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+   <link rel="stylesheet"herf="tyles.css">
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Shiv Club - Number Game</title> 
+  <link rel="stylesheet" href="style.css"> 
+ </head> 
+ <body> 
+  <div class="logo-container"> 
+   <h1 class="heading">Shiv Club</h1> 
+  </div> 
+  <div class="wallet-box"> 
+   <h2>₹0.73</h2> 
+   <p>Wallet Balance</p> 
+   <div class="wallet-buttons"> <button class="withdraw">Withdraw</button> <button class="deposit">Deposit</button> 
+   </div> 
+  </div> 
+  <div class="container"> 
+   <div class="top-box"> 
+    <div class="wingo"> 
+     <p>Wingo 30s</p> 
+     <div class="numbers" id="wingo-numbers"></div> 
+    </div> 
+    <div class="time-box"> 
+     <p>Time remaining</p> 
+     <div class="time-remaining" id="timer">
+       00:30 
+     </div> 
+     <div class="period-number" id="period-number"></div> <!-- Period Number Display --> 
+    </div> 
+   </div> 
+   <div class="heading-boxes"> 
+    <div class="heading-box green">
+      Green 
+    </div> 
+    <div class="heading-box violet">
+      Violet 
+    </div> 
+    <div class="heading-box red">
+      Red 
+    </div> 
+   </div> 
+   <div class="number-grid"> 
+    <div class="row"> 
+     <div class="number-ball violet">
+       0 
+     </div> 
+     <div class="number-ball green">
+       1 
+     </div> 
+     <div class="number-ball red">
+       2 
+     </div> 
+     <div class="number-ball green">
+       3 
+     </div> 
+     <div class="number-ball red">
+       4 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="number-ball violet">
+       5 
+     </div> 
+     <div class="number-ball red">
+       6 
+     </div> 
+     <div class="number-ball green">
+       7 
+     </div> 
+     <div class="number-ball red">
+       8 
+     </div> 
+     <div class="number-ball green">
+       9 
+     </div> 
+    </div> 
+   </div> 
+   <div class="heading-boxes"> 
+    <div class="heading-box big">
+      Big 
+    </div> 
+    <div class="heading-box small">
+      Small 
+    </div> 
+   </div> 
+   <div class="history-section"> 
+    <hr class="divider"> 
+    <hr class="divider"> 
+    <div class="history-header"> <span class="period-no">Period no.</span> <span class="number-center">No.</span> <span class="big-small-right">Big/Small</span> 
+    </div> 
+   </div> 
+   <hr class="divider"> 
+   <div class="results-history" id="results-history"></div> 
+  </div> 
+  <script src="script.js"></script> 
+ </body>
+</html>
